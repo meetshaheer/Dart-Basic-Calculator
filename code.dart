@@ -3,24 +3,24 @@ import 'dart:io';
 // Define a basic Calculator class
 class Calculator {
   // Define addition Function
-  double add(double a, double b) {
-    return a + b;
+  double add(double no_1, double no_2) {
+    return no_1 + no_2;
   }
 
   // Define Subtraction Function
-  double subtract(double a, double b) {
-    return a - b;
+  double subtract(double no_1, double no_2) {
+    return no_1 - no_2;
   }
 
   // Define Multiplication Function
-  double multiply(double a, double b) {
-    return a * b;
+  double multiply(double no_1, double no_2) {
+    return no_1 * no_2;
   }
 
   // Define Division Function
-  double divide(double a, double b) {
-    if (b != 0) {
-      return a / b;
+  double divide(double no_1, double no_2) {
+    if (no_2 != 0) {
+      return no_1 / no_2;
     } else {
       print("Error: Cannot divide by zero.");
       return double.nan;
@@ -28,8 +28,26 @@ class Calculator {
   }
 
   // Define Reminder Function
-  double reminder(double a, double b) {
-    return a % b;
+  double reminder(double no_1, double no_2) {
+    return no_1 % no_2;
+  }
+
+  // Defining a Menu
+  menu() {
+    print("-----------------------------------------");
+    print("Enter 1 For Addition.................");
+    print("Enter 2 For Subtraction..............");
+    print("Enter 3 For Multiplication...........");
+    print("Enter 4 For Division.................");
+    print("Enter 5 For Reminder.................");
+    print("Enter 6 For Sqaure Root..............");
+    print("Enter 7 For Cubic Root...............");
+    print("Enter 8 For Sin Function.............");
+    print("Enter 9 For Cosine Function..........");
+    print("Enter 10 For Tangent Root............");
+    print("Enter 11 For Inverse Sin Function....");
+    print("Enter 12 For Inverse Cos Function....");
+    print("Enter 13 For Inverse Tan Function....");
   }
 }
 
