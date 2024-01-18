@@ -1,6 +1,23 @@
 import 'dart:io';
 
+// Take user input for two numbers
+user_input1(double num1, double num2) {
+  stdout.write("Enter the first number: ");
+  double num1 = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter the second number: ");
+  double num2 = double.parse(stdin.readLineSync()!);
+}
+
+// Take user input for one number
+user_input2(double num1) {
+  stdout.write("Enter the number: ");
+  double num1 = double.parse(stdin.readLineSync()!);
+  print(num1);
+}
+
 // Define a basic Calculator class
+
 class Calculator {
   // Define addition Function
   double add(double no_1, double no_2) {
@@ -55,12 +72,12 @@ void main() {
   // Create an instance/ Object of the Calculator class
   Calculator calculator = Calculator();
 
-  // Take user input for two numbers
-  stdout.write("Enter the first number: ");
-  double num1 = double.parse(stdin.readLineSync()!);
+  // // Take user input for two numbers
+  // stdout.write("Enter the first number: ");
+  // double num1 = double.parse(stdin.readLineSync()!);
 
-  stdout.write("Enter the second number: ");
-  double num2 = double.parse(stdin.readLineSync()!);
+  // stdout.write("Enter the second number: ");
+  // double num2 = double.parse(stdin.readLineSync()!);
 
   // Loading Screen UI
   print("Configuring Dart Calculator");
@@ -71,9 +88,15 @@ void main() {
   print("Loading.................");
   print("---------------------------------------------");
 
-  // Perform calculations
-  print("Sum: ${calculator.add(num1, num2)}");
-  print("Difference: ${calculator.subtract(num1, num2)}");
-  print("Product: ${calculator.multiply(num1, num2)}");
-  print("Quotient: ${calculator.divide(num1, num2)}");
+  calculator.menu();
+  // // Perform calculations
+  // print("Sum: ${calculator.add(num1, num2)}");
+  // print("Difference: ${calculator.subtract(num1, num2)}");
+  // print("Product: ${calculator.multiply(num1, num2)}");
+  // print("Quotient: ${calculator.divide(num1, num2)}");
+
+  // Take user input for two numbers
+  double no1 = 0, no2 = 0;
+  user_input1(no1, no2);
+  user_input2(no1);
 }
